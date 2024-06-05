@@ -1,6 +1,7 @@
-const nav = document.getElementById("nav")
-const toggler = document.getElementById("toggler")
+const dropdown = document.getElementById("dropdown");
+const toggler = document.getElementById("toggler");
 
-toggler.addEventListener("click" =()=>{
-    nav.classList.toggle("hidden");
-})
+toggler.addEventListener("click", () => {
+  dropdown.classList.toggle("hidden");
+});
+// alert("Hi i am connected")

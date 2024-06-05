@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -9,30 +9,38 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Include Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="bg-white text-gray-900">
 
     <!-- Navbar -->
-    <header class="lg:bg-gray-800 p-4 md:bg-gray-800">
-        <div class="lg:hidden">
-            <nav>
-              <button class="p-4" id="toggler">
-                <img height="20px" width="20px" src="./image/menu-bar.png" alt="menu button" />
-              </button>
-            </nav>
-        </div>
-        <div id="nav" class="container mx-auto flex justify-between items-center">
+    <header class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-white text-2xl font-bold">SkillBridge</h1>
-            <nav>
-                <ul class="lg:flex space-x-6">
-                    <li><a href="#" class="text-white hover:text-teal-400">Home</a></li>
-                    <li><a href="#" class="text-white hover:text-teal-400">About Us</a></li>
-                    <li><a href="#" class="text-white hover:text-teal-400">Features/Benefits</a></li>
-                    <li><a href="#" class="text-white hover:text-teal-400">Pricing</a></li>
-                    <li><a href="#" class="text-white hover:text-teal-400">Contact</a></li>
+            <button class="p-4 lg:hidden" id="toggler">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <nav id="nav" class="hidden lg:flex lg:items-center lg:space-x-6">
+                <ul class="flex flex-col lg:flex-row lg:space-x-6">
+                    <li><a href="#" class="text-white hover:text-teal-400 py-2">Home</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400 py-2">About Us</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400 py-2">Features/Benefits</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400 py-2">Pricing</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400 py-2">Contact</a></li>
                 </ul>
             </nav>
+        </div>
+        <div id="dropdown" class="hidden lg:hidden">
+            <ul class="flex flex-col space-y-2 p-4 bg-gray-800">
+                <li><a href="#" class="text-white hover:text-teal-400">Home</a></li>
+                <li><a href="#" class="text-white hover:text-teal-400">About Us</a></li>
+                <li><a href="#" class="text-white hover:text-teal-400">Features/Benefits</a></li>
+                <li><a href="#" class="text-white hover:text-teal-400">Pricing</a></li>
+                <li><a href="#" class="text-white hover:text-teal-400">Contact</a></li>
+            </ul>
         </div>
     </header>
 
@@ -52,7 +60,7 @@
         </div>
     </section>
     <section class="mt-15 mb-8 items-center">
-        <h1 class="text-6xl text-center text-blue-500">Our Features</h1>
+        <h1 class="text-6xl font-bold text-center text-blue-500">Our Features</h1>
     </section>
 
     <!-- Feature Cards Section -->
@@ -174,7 +182,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Course 1 -->
                 <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
-                    <h3 class="text-4xl font-semibold text-primary-content mb-6 text-center">Digital Marketing</h3>
+                    <h3 class="text-4xl font-semibold text-blue-400 mb-6 text-center">Digital Marketing</h3>
                     <ul class="text-gray-700 list-disc pl-6 text-left">
                         <li>Main Features: SEO, Social Media Marketing, PPC</li>
                         <li>Duration: 8 weeks</li>
@@ -185,7 +193,7 @@
                 </div>
                 <!-- Course 2 -->
                 <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
-                    <h3 class="text-4xl font-semibold text-primary-content mb-6 text-center">Web Development</h3>
+                    <h3 class="text-4xl font-semibold text-blue-400 mb-6 text-center">Web Development</h3>
                     <ul class="text-gray-700 list-disc pl-6 text-left">
                         <li>Main Features: HTML, CSS, JavaScript, React</li>
                         <li>Duration: 12 weeks</li>
@@ -196,7 +204,7 @@
                 </div>
                 <!-- Course 3 -->
                 <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
-                    <h3 class="text-4xl font-semibold text-primary-content mb-6 text-center">Graphics Design</h3>
+                    <h3 class="text-4xl font-semibold text-blue-400 mb-6 text-center">Graphics Design</h3>
                     <ul class="text-gray-700 list-disc pl-6 text-left">
                         <li>Main Features: Adobe Photoshop, Illustrator </li>
                         <li>Duration: 10 weeks</li>
