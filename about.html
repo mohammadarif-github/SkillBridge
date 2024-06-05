@@ -15,7 +15,7 @@
 <body class="bg-white text-gray-900">
 
     <!-- Navbar -->
-    <header class="bg-gray-800 p-4">
+    <header class="bg-gray-800 p-4 mb-6">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-white text-2xl font-bold focus:outline-none">
                 SkillBridge
@@ -28,7 +28,7 @@
             <nav id="nav" class="hidden lg:flex lg:items-center lg:space-x-6">
                 <ul class="flex flex-col lg:flex-row lg:space-x-6">
                     <li><a href="index.html" class="text-white hover:text-teal-400 py-2">Home</a></li>
-                    <li><a href="about.html" class="text-white hover:text-teal-400 py-2">About Us</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400 py-2">About Us</a></li>
                     <li><a href="#" class="text-white hover:text-teal-400 py-2">Features/Benefits</a></li>
                     <li><a href="#" class="text-white hover:text-teal-400 py-2">Pricing</a></li>
                     <li><a href="contact.html" class="text-white hover:text-teal-400 py-2">Contact</a></li>
@@ -38,7 +38,7 @@
         <div id="dropdown" class="hidden lg:hidden">
             <ul class="flex flex-col space-y-2 p-4 bg-gray-800">
                 <li><a href="index.html" class="text-white hover:text-teal-400">Home</a></li>
-                <li><a href="about.html" class="text-white hover:text-teal-400">About Us</a></li>
+                <li><a href="#" class="text-white hover:text-teal-400">About Us</a></li>
                 <li><a href="#" class="text-white hover:text-teal-400">Features/Benefits</a></li>
                 <li><a href="#" class="text-white hover:text-teal-400">Pricing</a></li>
                 <li><a href="contact.html" class="text-white hover:text-teal-400">Contact</a></li>
@@ -46,56 +46,30 @@
         </div>
     </header>
 
-    <main class="container mx-auto p-4">
-        <section class="text-center my-8">
-            <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
-            <p class="text-lg">We'd love to hear from you! Get in touch with us using the information below or send us a
-                message.</p>
-        </section>
-        <section class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
-            <p class="mb-2">Address: GEC, Chittagong, Bangladesh</p>
-            <p class="mb-2">
-                Phone: <a href="tel:+8801648232795" class="text-green-600 hover:underline">(880) 1648232795</a>
-            </p>
-            <p class="mb-2">
-                Email: <a href="mailto:info@skillbridge.com" class="text-green-600 hover:underline">info@myrestaurant.com</a>
-            </p>
-        </section>        
-        <section class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Location</h2>
-            <div class="w-full h-64">
-                <iframe class="w-full h-full"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.855699705572!2d91.81917207565886!3d22.35907682964436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd89aaa8239cd%3A0x6e65fa00001dd59f!2sGEC%20More%2C%20Chittagong!5e0!3m2!1sen!2sbd!4v1717417641771!5m2!1sen!2sbd"
-                    frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <!-- About Us section -->
+    
+    <section class="container mx-auto px-6 md:px-4  lg:px-4 py-12">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">About SkillBridge</h1>
+        <div class="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-12">
+            <div class="lg:w-1/2">
+                <p class="text-lg text-gray-700 mb-6">
+                    At SkillBridge, we believe in the power of education to transform lives. Our platform offers a wide range of online courses designed to help you learn new skills, advance your career, and achieve your personal and professional goals. Whether you're looking to master a new technology, enhance your business acumen, or explore a new hobby, SkillBridge has a course for you.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    Our mission is to make high-quality education accessible to everyone, everywhere. We partner with industry leaders and expert educators to bring you the latest content and the best learning experience. With flexible scheduling, you can learn at your own pace, on your own time.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    Join our community of learners and take the next step in your education journey with SkillBridge.
+                </p>
             </div>
-        </section>
-        <section class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Send Us a Message</h2>
-            <form class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
-                <div class="mb-4">
-                    <label for="contact-name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="contact-name" name="contact-name"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
-                </div>
-                <div class="mb-4">
-                    <label for="contact-email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="contact-email" name="contact-email"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
-                </div>
-                <div class="mb-4">
-                    <label for="contact-message" class="block text-sm font-medium text-gray-700">Message</label>
-                    <textarea id="contact-message" name="contact-message"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded" required></textarea>
-                </div>
-                <div class=" bg-blue-500 hover:bg-blue-600 text-center mb-6 rounded-lg">
-                    <button type="submit" class="text-black px-4 py-2 font-semibold rounded-lg">Send Message</button>
-                </div>
-            </form>
-        </section>
-    </main>
+            <div class="lg:w-1/2">
+                <img src="./image/20289401_6262376.jpg" alt="About Us" class="w-full rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
 
-    <footer class="bg-gray-800 text-gray-300 py-8">
+
+    <footer class="bg-gray-800 text-gray-300 py-8 lg:mt-20 lg:pt-10">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
             <!-- Navigation Links -->
             <nav class="mb-4 md:mb-0">
