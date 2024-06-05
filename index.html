@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- Navbar -->
+    <header class="lg:bg-gray-800 p-4 md:bg-gray-800">
+        <div class="lg:hidden">
+            <nav>
+              <button class="p-4" id="toggler">
+                <img height="20px" width="20px" src="./image/menu-bar.png" alt="menu button" />
+              </button>
+            </nav>
+        </div>
+        <div id="nav" class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">SkillBridge</h1>
+            <nav>
+                <ul class="lg:flex space-x-6">
+                    <li><a href="#" class="text-white hover:text-teal-400">Home</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400">About Us</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400">Features/Benefits</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400">Pricing</a></li>
+                    <li><a href="#" class="text-white hover:text-teal-400">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="m-4 flex items-center">
+        <!-- Text Column -->
+        <div class="w-full w-1/2 lg:mt-10 pl-8 lg:pl-12">
+            <div class="container mx-auto h-full flex flex-col justify-center items-start text-left">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 ">Learn Anything, Anytime, Anywhere</h2>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-2 lg:py-3 lg:px-8 rounded-full shadow-md transition duration-300 lg:text-2xl">Start
+                    Learning Now</button>
+            </div>
+        </div>
+        <!-- Image Column -->
+        <div class="w-full w-1/2 px-4">
+            <img src="./image/20289401_6262376.jpg" alt="Background Image" class="w-full h-full object-cover">
+        </div>
+    </section>
+    <section class="mt-15 mb-8 items-center">
+        <h1 class="text-6xl text-center text-blue-500">Our Features</h1>
+    </section>
+
+    <!-- Feature Cards Section -->
+    <section class="container mx-auto px-4 lg:px-0 py-15 mt-20 mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Feature Card 1 -->
+            <div class="p-6 bg-white rounded-lg shadow-md flex items-center hover:bg-gray-100">
+                <!-- Icon Container -->
+                <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center mr-4 text-6xl">
+                    <!-- Icon -->
+                    📚
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-2">Wide Range of Courses</h3>
+                    <p class="text-gray-600">Access courses across various subjects and skill levels.</p>
+                </div>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="p-6 bg-white rounded-lg shadow-md flex items-center hover:bg-gray-100">
+                <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center mr-4 text-6xl">
+                    <!-- Icon -->
+                    👨‍🏫
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Expert Instructors</h3>
+                    <p class="text-gray-600">Learn from industry leaders and experienced educators.</p>
+                </div>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="p-6 bg-white rounded-lg shadow-md flex items-center hover:bg-gray-100">
+                <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center mr-4 text-6xl">
+                    <!-- Icon -->
+                    ⏰
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Flexible Schedule</h3>
+                    <p class="text-gray-600">Study at your own pace with 24/7 access to course materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 bg-gray-50 rounded-lg">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-gray-800 mb-6">What Our Students Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card w-75 h-75 bg-gray-100 text-gray-800 rounded-lg p-4 border border-gray-200 hover:bg-gray-200">
+                    <div class="text-center">
+                        <!-- Left Quotation Mark -->
+                        <span class="text-4xl font-bold inline-block">&ldquo;</span>
+                        <div class="inline-block">
+                            <!-- Testimonial Text -->
+                            <p class="text-lg font-medium mb-4">Vestibulum vitae urna nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sit amet blandit nunc, at pellentesque justo.</p>
+                            <!-- Right Quotation Mark -->
+                            <span class="text-4xl font-bold inline-block">&rdquo;</span>
+                            <!-- Author's Name -->
+                            <p class="text-sm font-semibold">- Jane Smith</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Testimonial 2 -->
+                <div class="card w-75 h-75 bg-gray-100 text-gray-800 rounded-lg p-4 border border-gray-200 hover:bg-gray-200">
+                    <div class="text-center">
+                        <!-- Left Quotation Mark -->
+                        <span class="text-4xl font-bold inline-block">&ldquo;</span>
+                        <div class="inline-block">
+                            <!-- Testimonial Text -->
+                            <p class="text-lg font-medium mb-4">Vestibulum vitae urna nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sit amet blandit nunc, at pellentesque justo.</p>
+                            <!-- Right Quotation Mark -->
+                            <span class="text-4xl font-bold inline-block">&rdquo;</span>
+                            <!-- Author's Name -->
+                            <p class="text-sm font-semibold">- Jane Smith</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="card w-75 h-75 bg-gray-100 text-gray-800 rounded-lg p-4 border border-gray-200 hover:bg-gray-200">
+                    <div class="text-center">
+                        <!-- Left Quotation Mark -->
+                        <span class="text-4xl font-bold inline-block">&ldquo;</span>
+                        <div class="inline-block">
+                            <!-- Testimonial Text -->
+                            <p class="text-lg font-medium mb-4">Vestibulum vitae urna nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sit amet blandit nunc, at pellentesque justo.</p>
+                            <!-- Right Quotation Mark -->
+                            <span class="text-4xl font-bold inline-block">&rdquo;</span>
+                            <!-- Author's Name -->
+                            <p class="text-sm font-semibold">- Jane Smith</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="card w-75 h-75 bg-gray-100 text-gray-800 rounded-lg p-4 border border-gray-200 hover:bg-gray-200">
+                    <div class="text-center">
+                        <!-- Left Quotation Mark -->
+                        <span class="text-4xl font-bold inline-block">&ldquo;</span>
+                        <div class="inline-block">
+                            <!-- Testimonial Text -->
+                            <p class="text-lg font-medium mb-4">Vestibulum vitae urna nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sit amet blandit nunc, at pellentesque justo.</p>
+                            <!-- Right Quotation Mark -->
+                            <span class="text-4xl font-bold inline-block">&rdquo;</span>
+                            <!-- Author's Name -->
+                            <p class="text-sm font-semibold">- Jane Smith</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 mt-15 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-6xl font-semibold text-gray-800 text-blue-500 mb-4 text-center ">Our Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
+                    <h3 class="text-4xl font-semibold text-primary-content mb-6 text-center">Digital Marketing</h3>
+                    <ul class="text-gray-700 list-disc pl-6 text-left">
+                        <li>Main Features: SEO, Social Media Marketing, PPC</li>
+                        <li>Duration: 8 weeks</li>
+                        <li>Target: Beginners to Intermediate</li>
+                        <ol class="text-center text-xl font-bold text-blue-700 mt-2">Price : $ 49.99</ol>
+                    </ul>
+                    <button class="block mx-auto mt-6 px-8 py-3 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition duration-300">Buy Now</button>
+                </div>
+                <!-- Course 2 -->
+                <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
+                    <h3 class="text-4xl font-semibold text-primary-content mb-6 text-center">Web Development</h3>
+                    <ul class="text-gray-700 list-disc pl-6 text-left">
+                        <li>Main Features: HTML, CSS, JavaScript, React</li>
+                        <li>Duration: 12 weeks</li>
+                        <li>Target: Beginners to Advanced level</li>
+                        <ol class="text-center text-xl font-bold text-blue-700 mt-2">Price : $ 49.99</ol>
+                    </ul>
+                    <button class="block mx-auto mt-6 px-8 py-3 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition duration-300">Buy Now</button>
+                </div>
+                <!-- Course 3 -->
+                <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
+                    <h3 class="text-4xl font-semibold text-primary-content mb-6 text-center">Graphics Design</h3>
+                    <ul class="text-gray-700 list-disc pl-6 text-left">
+                        <li>Main Features: Adobe Photoshop, Illustrator </li>
+                        <li>Duration: 10 weeks</li>
+                        <li>Target: Beginners to Intermediate</li>
+                        <ol class="text-center text-xl font-bold text-blue-700 mt-2">Price : $ 49.99</ol>
+                        <button class="block mx-auto mt-6 px-8 py-3 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition duration-300">Buy Now</button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-blue-50">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-gray-800 mb-6 text-center">Join Our Community</h2>
+            <p class="text-gray-600 text-center mb-8 text-xl">Ready to take your skills to the next level? Join our community today and unlock access to premium courses!</p>
+            <!-- Call to Action Button -->
+            <div class="flex justify-center">
+                <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300">Sign Up Now</a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <!-- Navigation Links -->
+            <nav class="mb-4 md:mb-0">
+                <ul class="flex flex-wrap justify-center md:justify-start space-x-8">
+                    <li><a href="#" class="hover:text-blue-500 text-xl">About Us</a></li>
+                    <li><a href="#" class="hover:text-blue-500 text-xl">Contact</a></li>
+                    <li><a href="#" class="hover:text-blue-500 text-xl">Pricing</a></li>
+                </ul>
+            </nav>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <!-- Copyright Information -->
+            <p class="text-center md:text-left text-xl">&copy; 2024 SkillBridge. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
