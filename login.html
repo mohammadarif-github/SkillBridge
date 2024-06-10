@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 min-h-screen">
 
     <!-- Navbar -->
     <header class="bg-gray-800 p-4">
@@ -46,53 +46,54 @@
         </div>
     </header>
 
-    <main class="container mx-auto p-4">
-        <section class="text-center my-8">
-            <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
-            <p class="text-lg">We'd love to hear from you! Get in touch with us using the information below or send us a
-                message.</p>
-        </section>
-        <section class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
-            <p class="mb-2">Address: GEC, Chittagong, Bangladesh</p>
-            <p class="mb-2">
-                Phone: <a href="tel:+8801648232795" class="text-green-600 hover:underline">(880) 1648232795</a>
-            </p>
-            <p class="mb-2">
-                Email: <a href="mailto:info@skillbridge.com" class="text-green-600 hover:underline">info@myrestaurant.com</a>
-            </p>
-        </section>        
-        <section class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Location</h2>
-            <div class="w-full h-64">
-                <iframe class="w-full h-full"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.855699705572!2d91.81917207565886!3d22.35907682964436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd89aaa8239cd%3A0x6e65fa00001dd59f!2sGEC%20More%2C%20Chittagong!5e0!3m2!1sen!2sbd!4v1717417641771!5m2!1sen!2sbd"
-                    frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </section>
-        <section class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Send Us a Message</h2>
-            <form class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
-                <div class="mb-4">
-                    <label for="contact-name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="contact-name" name="contact-name"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+    <main class="p-6 mb-20 mt-20">
+        <div class="bg-white p-8 rounded shadow-md w-full max-w-md mx-auto">
+            <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+            <form class="space-y-6">
+                <p id="error" class="text-red-700"><strong></strong></p>
+                <p id="success" class="text-sky-500"><strong></strong></p>
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                        <span
+                            class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input type="text" name="username" id="username" required
+                            class="flex-1 block w-full px-3 py-2 border border-gray-300 rounded-r-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
+                    </div>
                 </div>
-                <div class="mb-4">
-                    <label for="contact-email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="contact-email" name="contact-email"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                        <span
+                            class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" name="password" id="password" required
+                            class="flex-1 block w-full px-3 py-2 border border-gray-300 rounded-r-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
+                    </div>
                 </div>
-                <div class="mb-4">
-                    <label for="contact-message" class="block text-sm font-medium text-gray-700">Message</label>
-                    <textarea id="contact-message" name="contact-message"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded" required></textarea>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="remember_me" name="remember_me" type="checkbox"
+                            class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded">
+                        <label for="remember_me" class="ml-2 block text-sm text-gray-900"> Remember me </label>
+                    </div>
+                    <div class="text-sm">
+                        <a href="#" class="font-medium text-teal-600 hover:text-teal-500"> Forgot your password? </a>
+                    </div>
                 </div>
-                <div class="bg-blue-500 hover:bg-blue-600 text-center mb-6 rounded-lg">
-                    <button type="submit" class="text-black px-4 py-2 font-semibold rounded-lg">Send Message</button>
+                <div class="bg-blue-500 hover:bg-blue-600 rounded-lg" >
+                    <button type="submit" onclick="Login(event)"
+                        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm  font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+                        Login
+                    </button>
                 </div>
+                <p class="text-center text-sm text-gray-600">Don't have an account? <a href="register.html"
+                        class="font-medium text-teal-600 hover:text-teal-500">Register</a></p>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer class="bg-gray-800 text-gray-300 py-8">
@@ -118,6 +119,7 @@
     </footer>
     <script src="./js/scripts.js"></script>
     <script src="./js/jwt.js"></script>
+    <script src="./js/auth.js"></script>
 </body>
 
 </html>

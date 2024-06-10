@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-white text-gray-900 min-h-screen">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-md">
+            <div class="p-6">
+                <h2 class="text-2xl font-semibold text-gray-700">Super Admin</h2>
+                <nav class="mt-6" id='sidebar'>
+                    <a href="index.html" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                        <i class="fa fa-home mr-2"></i>Back to Home
+                    </a>
+                    <a href="add_course.html" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                        <i class="fa fa-plus mr-3"></i> Add Course
+                    </a>
+                    <a href="#all-courses" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                        <i class="fa fa-user-plus mr-3"></i> All Courses
+                    </a>
+                    <a href="#all-users" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                        <i class="fa fa-users mr-3"></i> All Users
+                    </a>
+                    <a href="#all-reviews" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                        <i class="fa fa-comments mr-3"></i> All Reviews
+                    </a>
+                    <a href="#sold-courses" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                        <i class="fa fa-shopping-cart mr-3"></i> Sold Courses
+                    </a>
+                    <a href="#" onclick="Logout()" id="logoutBtn" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                        <i class="fa fa-sign-out mr-3"></i> Logout
+                    </a>                    
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <!-- User Details Section -->
+        
+        
+        <div class="flex-1 p-6">
+            <section id="user-details" class="p-6 bg-white rounded-lg shadow-md mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center text-center">
+                        <i class="fas fa-user-circle text-4xl text-blue-500 mr-4"></i>
+                        <h2 class="text-2xl font-semibold text-gray-800">User Details</h2>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold mb-2" for="username">Username</label>
+                        <p id="username" class="p-2 bg-gray-100 rounded-md"></p>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold mb-2" for="first_name">First Name</label>
+                        <p id="first_name" class="p-2 bg-gray-100 rounded-md"></p>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold mb-2" for="last_name">Last Name</label>
+                        <p id="last_name" class="p-2 bg-gray-100 rounded-md"></p>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold mb-2" for="email">Email</label>
+                        <p id="email" class="p-2 bg-gray-100 rounded-md"></p>
+                    </div>
+                </div>
+            </section>
+            <div id="staffSection" class="mb-8 hidden" >
+                <h3 class="text-4xl font-semibold mb-4 text-center">All Courses</h3>
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Course Title</th>
+                            <th class="py-2 px-4 border-b">Instructor</th>
+                            <th class="py-2 px-4 border-b">Price</th>
+                            <th class="py-2 px-4 border-b">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="coursesTbody">
+                        <!-- Rows will be appended here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <section id="adminSection" class="hidden">
+                <div id="all-users" class="mb-8">
+                    <h3 class="text-4xl font-semibold mb-4 text-center">All Users</h3>
+                    <!-- All Users Content -->
+                    <table class="min-w-full bg-white" id="usersTable">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border-b">Username</th>
+                                <th class="py-2 px-4 border-b">Email</th>
+                                <th class="py-2 pl-2 border-b">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+    
+                <div id="all-reviews" class="mb-8">
+                    <h3 class="text-4xl font-semibold mb-4 text-center">All Reviews</h3>
+                    <!-- All Reviews Content -->
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border-b">User</th>
+                                <th class="py-2 px-4 border-b">Course</th>
+                                <th class="py-2 px-4 border-b">Review</th>
+                                <th class="py-2 px-4 border-b">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <td class="py-2 px-4 border-b">user1</td>
+                                <td class="py-2 px-4 border-b">Course1</td>
+                                <td class="py-2 px-4 border-b">Great course!</td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="px-4 py-1 text-sm text-white bg-yellow-500 rounded">Edit</button>
+                                    <button class="mt-2 px-4 py-1 text-sm text-white bg-red-500 rounded">Delete</button>
+                                </td>
+                            </tr>
+                            <!-- More rows -->
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div id="sold-courses" class="mb-8">
+                    <h3 class="text-4xl font-semibold mb-4 text-center">Sold Courses</h3>
+                    <!-- Sold Courses Content -->
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border-b">Course Title</th>
+                                <th class="py-2 px-4 border-b">Instructor</th>
+                                <th class="py-2 px-4 border-b">Price</th>
+                                <th class="py-2 px-4 border-b">Sold Date</th>
+                                <th class="py-2 px-4 border-b">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <td class="py-2 px-4 border-b">Course1</td>
+                                <td class="py-2 px-4 border-b">Instructor1</td>
+                                <td class="py-2 px-4 border-b">$100</td>
+                                <td class="py-2 px-4 border-b">2024-06-10</td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="px-4 py-1 text-sm text-white bg-gray-500 rounded">See Details</button>
+                                </td>
+                            </tr>
+                            <!-- More rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <!-- Navigation Links -->
+            <nav class="mb-4 md:mb-0">
+                <ul class="flex flex-wrap justify-center md:justify-start space-x-8">
+                    <li><a href="about.html" class="hover:text-blue-500 text-xl">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-500 text-xl">Contact</a></li>
+                    <li><a href="#" class="hover:text-blue-500 text-xl">Pricing</a></li>
+                </ul>
+            </nav>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <!-- Copyright Information -->
+            <p class="text-center md:text-left text-xl">&copy; 2024 SkillBridge. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- <script src="./js/scripts.js"></script> -->
+    <script src="./js/jwt.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/dashboard.js"></script>
+</body>
+
+</html>
