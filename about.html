@@ -15,35 +15,39 @@
 <body class="bg-white text-gray-900">
 
     <!-- Navbar -->
-    <header class="bg-gray-800 p-4 mb-6">
-        <div class=" mx-auto flex justify-between items-center">
+    <header class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-white text-2xl font-bold focus:outline-none">
                 SkillBridge
             </a>
             <button class="p-4 lg:hidden" id="toggler">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
             <nav id="nav" class="hidden lg:flex lg:items-center lg:space-x-6">
                 <ul class="flex flex-col lg:flex-row lg:space-x-6">
                     <li><a href="index.html" class="text-white hover:text-teal-400 py-2">Home</a></li>
-                    <li><a href="#" class="text-white hover:text-teal-400 py-2">About Us</a></li>
-                    <li><a href="#" class="text-white hover:text-teal-400 py-2">Features/Benefits</a></li>
-                    <li><a href="#" class="text-white hover:text-teal-400 py-2">Pricing</a></li>
+                    <li><a href="about.html" class="text-white hover:text-teal-400 py-2">About Us</a></li>
+                    <li><a href="#features" class="text-white hover:text-teal-400 py-2">Features/Benefits</a></li>
+                    <li><a href="#Pricing" class="text-white hover:text-teal-400 py-2">Pricing</a></li>
                     <li><a href="contact.html" class="text-white hover:text-teal-400 py-2">Contact</a></li>
-                </ul>
+                    <li id="login"><a href="login.html" class="text-white hover:text-teal-400 py-2">Login</a></li>
+                    <li id="signup"><a href="register.html" class="text-white hover:text-teal-400 py-2">Sign Up</a></li>
+                    <li id="profile-icon" class="hidden"><a href="profile.html" class="text-white hover:text-teal-400 py-2"><i class="fa fa-user mr-2 text-2xl"></i></a></li>
+                </ul>                
             </nav>
         </div>
         <div id="dropdown" class="hidden lg:hidden">
             <ul class="flex flex-col space-y-2 p-4 bg-gray-800">
                 <li><a href="index.html" class="text-white hover:text-teal-400">Home</a></li>
-                <li><a href="#" class="text-white hover:text-teal-400">About Us</a></li>
-                <li><a href="#" class="text-white hover:text-teal-400">Features/Benefits</a></li>
-                <li><a href="#" class="text-white hover:text-teal-400">Pricing</a></li>
+                <li><a href="about.html" class="text-white hover:text-teal-400">About Us</a></li>
+                <li><a href="#features" class="text-white hover:text-teal-400">Features/Benefits</a></li>
+                <li><a href="#Pricing" class="text-white hover:text-teal-400">Courses</a></li>
                 <li><a href="contact.html" class="text-white hover:text-teal-400">Contact</a></li>
+                <li id="sidebar-login"><a href="login.html" class="text-white hover:text-teal-400 py-2">Login</a></li>
+                <li id="sidebar-signup"><a href="register.html" class="text-white hover:text-teal-400 py-2">Sign Up</a></li>
+                <li id="sidebar-profile-icon" class="hidden"><a href="profile.html" class="text-white hover:text-teal-400 py-2"><i class="fa fa-user mr-2 text-2xl"></i></a></li>
             </ul>
         </div>
     </header>

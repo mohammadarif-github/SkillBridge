@@ -1,6 +1,6 @@
 async function loadDetails() {
   const id = localStorage.getItem("id");
-  const url = `http://127.0.0.1:8000/user/profile/${id}/`;
+  const url = `https://skillbridge-9i2p.onrender.com/user/profile/${id}/`;
   const options = {
     method: "GET",
   };
@@ -40,11 +40,10 @@ const showDetails = (data) => {
 
 async function load_courses() {
   try {
-    const url = "http://127.0.0.1:8000/main/courses";
+    const url = "https://skillbridge-9i2p.onrender.com/main/courses";
     const options = {
       method: "GET",
     };
-
     const response = await fetchWithToken(url, options);
 
     if (!response.ok) {
@@ -61,6 +60,7 @@ async function load_courses() {
 document.addEventListener("DOMContentLoaded", load_courses);
 
 const displayCourses = (courses) => {
+    console.log(courses);
   coursesTbody.innerHTML = "";
     const id = localStorage.getItem("id")
   courses.forEach((course) => {
@@ -87,7 +87,7 @@ const displayCourses = (courses) => {
 
 async function loadUsers() {
     try {
-      const url = "http://127.0.0.1:8000/users/";
+      const url = "https://skillbridge-9i2p.onrender.com/users/";
       const options = {
         method: "GET",
       };

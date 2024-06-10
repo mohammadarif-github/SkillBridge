@@ -30,7 +30,7 @@
                     <li><a href="index.html" class="text-white hover:text-teal-400 py-2">Home</a></li>
                     <li><a href="about.html" class="text-white hover:text-teal-400 py-2">About Us</a></li>
                     <li><a href="#features" class="text-white hover:text-teal-400 py-2">Features/Benefits</a></li>
-                    <li><a href="courses.html" class="text-white hover:text-teal-400 py-2">Pricing</a></li>
+                    <li><a href="#Pricing" class="text-white hover:text-teal-400 py-2">Pricing</a></li>
                     <li><a href="contact.html" class="text-white hover:text-teal-400 py-2">Contact</a></li>
                     <li id="login"><a href="login.html" class="text-white hover:text-teal-400 py-2">Login</a></li>
                     <li id="signup"><a href="register.html" class="text-white hover:text-teal-400 py-2">Sign Up</a></li>
@@ -43,7 +43,7 @@
                 <li><a href="index.html" class="text-white hover:text-teal-400">Home</a></li>
                 <li><a href="about.html" class="text-white hover:text-teal-400">About Us</a></li>
                 <li><a href="#features" class="text-white hover:text-teal-400">Features/Benefits</a></li>
-                <li><a href="courses.html" class="text-white hover:text-teal-400">Courses</a></li>
+                <li><a href="#Pricing" class="text-white hover:text-teal-400">Courses</a></li>
                 <li><a href="contact.html" class="text-white hover:text-teal-400">Contact</a></li>
                 <li id="sidebar-login"><a href="login.html" class="text-white hover:text-teal-400 py-2">Login</a></li>
                 <li id="sidebar-signup"><a href="register.html" class="text-white hover:text-teal-400 py-2">Sign Up</a></li>
@@ -72,8 +72,8 @@
     </section>
 
     <!-- Feature Cards Section -->
-    <section class="container mx-auto px-4 lg:px-0 py-15 mt-20 mb-10" id="features">
-        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
+    <section class="container mx-auto px-4 lg:px-0 py-15 mt-20 mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6" id="features">
             <!-- Feature Card 1 -->
             <div class="p-6 bg-white rounded-lg shadow-md flex items-center hover:bg-gray-100">
                 <!-- Icon Container -->
@@ -184,46 +184,14 @@
         </div>
     </section>
 
-    <section class="py-12 mt-15 bg-gray-100">
+    <section class="py-12 mt-15 bg-gray-100" id="Pricing">
         <div class="container mx-auto">
-            <h2 class="text-6xl font-semibold text-gray-800 text-blue-500 mb-4 text-center ">Our Courses</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Course 1 -->
-                <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
-                    <h3 class="text-4xl font-semibold text-blue-400 mb-6 text-center">Digital Marketing</h3>
-                    <ul class="text-gray-700 list-disc pl-6 text-left">
-                        <li>Main Features: SEO, Social Media Marketing, PPC</li>
-                        <li>Duration: 8 weeks</li>
-                        <li>Target: Beginners to Intermediate</li>
-                        <ol class="text-center text-xl font-bold text-blue-700 mt-2">Price : $ 49.99</ol>
-                    </ul>
-                    <button class="block mx-auto mt-6 px-8 py-3 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition duration-300">Buy Now</button>
-                </div>
-                <!-- Course 2 -->
-                <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
-                    <h3 class="text-4xl font-semibold text-blue-400 mb-6 text-center">Web Development</h3>
-                    <ul class="text-gray-700 list-disc pl-6 text-left">
-                        <li>Main Features: HTML, CSS, JavaScript, React</li>
-                        <li>Duration: 12 weeks</li>
-                        <li>Target: Beginners to Advanced level</li>
-                        <ol class="text-center text-xl font-bold text-blue-700 mt-2">Price : $ 49.99</ol>
-                    </ul>
-                    <button class="block mx-auto mt-6 px-8 py-3 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition duration-300">Buy Now</button>
-                </div>
-                <!-- Course 3 -->
-                <div class="bg-white rounded-xl shadow-md p-10 m-10 lg:h-98 hover:shadow-xl">
-                    <h3 class="text-4xl font-semibold text-blue-400 mb-6 text-center">Graphics Design</h3>
-                    <ul class="text-gray-700 list-disc pl-6 text-left">
-                        <li>Main Features: Adobe Photoshop, Illustrator </li>
-                        <li>Duration: 10 weeks</li>
-                        <li>Target: Beginners to Intermediate</li>
-                        <ol class="text-center text-xl font-bold text-blue-700 mt-2">Price : $ 49.99</ol>
-                        <button class="block mx-auto mt-6 px-8 py-3 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition duration-300">Buy Now</button>
-                    </ul>
-                </div>
+            <h2 class="text-6xl font-semibold text-gray-800 text-blue-500 mb-4 text-center">Our Courses</h2>
+            <div id="course_container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Courses will be inserted here -->
             </div>
         </div>
-    </section>
+    </section>    
 
     <section class="px-4 py-12 bg-blue-50">
         <div class="container mx-auto">
@@ -231,7 +199,7 @@
             <p class="text-gray-600 text-center mb-8 text-xl">Ready to take your skills to the next level? Join our community today and unlock access to premium courses!</p>
             <!-- Call to Action Button -->
             <div class="flex justify-center">
-                <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300">Sign Up Now</a>
+                <a href="register.html" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300">Sign Up Now</a>
             </div>
         </div>
     </section>
@@ -242,7 +210,7 @@
                 <ul class="flex flex-wrap justify-center md:justify-start space-x-8">
                     <li><a href="about.html" class="hover:text-blue-500 text-xl">About Us</a></li>
                     <li><a href="contact.html" class="hover:text-blue-500 text-xl">Contact</a></li>
-                    <li><a href="#" class="hover:text-blue-500 text-xl">Pricing</a></li>
+                    <li><a href="#Pricing" class="hover:text-blue-500 text-xl">Pricing</a></li>
                 </ul>
             </nav>
             <!-- Social Media Icons -->
@@ -259,6 +227,7 @@
     <script src="./js/scripts.js"></script>
     <script src="./js/jwt.js"></script>
     <script src="./js/auth.js"></script>
+    <script src="./js/load_courses.js"></script>
 </body>
 
 </html>

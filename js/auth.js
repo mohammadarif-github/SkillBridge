@@ -22,7 +22,7 @@ const Register = (event) => {
         password
       )
     ) {
-      fetch("http://127.0.0.1:8000/user/register", {
+      fetch("https://skillbridge-9i2p.onrender.com/user/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const Login = (event) => {
   };
 
   if (username && password) {
-    fetch("http://127.0.0.1:8000/user/token/", {
+    fetch("https://skillbridge-9i2p.onrender.com/user/token/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(info),
@@ -126,7 +126,7 @@ const Login = (event) => {
 
 const Logout = () => {
   const token = localStorage.getItem("access_token");
-  fetch("http://127.0.0.1:8000/user/logout", {
+  fetch("https://skillbridge-9i2p.onrender.com/user/logout", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -156,16 +156,17 @@ const Logout = () => {
     });
 };
 
+if (localStorage.getItem("authenticated") == "true") {
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("signup").classList.add("hidden");
+  document.getElementById("profile-icon").classList.remove("hidden");
+
+  document.getElementById("sidebar-login").classList.add("hidden");
+  document.getElementById("sidebar-signup").classList.add("hidden");
+  document.getElementById("sidebar-profile-icon").classList.remove("hidden");
+}
+
 const get_value = (id) => {
   const value = document.getElementById(id).value;
   return value;
 };
-if (localStorage.getItem("authenticated")=="true") {
-    document.getElementById("login").classList.add("hidden");
-    document.getElementById("signup").classList.add("hidden");
-    document.getElementById("profile-icon").classList.remove("hidden");
-
-    document.getElementById("sidebar-login").classList.add("hidden");
-    document.getElementById("sidebar-signup").classList.add("hidden");
-    document.getElementById("sidebar-profile-icon").classList.remove("hidden");
-}

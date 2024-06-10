@@ -19,7 +19,7 @@ const add_course = async (event) => {
         Target: target
     };
 
-    const url = "http://127.0.0.1:8000/main/courses/";
+    const url = "https://skillbridge-9i2p.onrender.com/main/courses/";
     const options = {
         method: "POST",
         headers: {
@@ -49,6 +49,8 @@ const add_course = async (event) => {
         alert("An error occurred while adding the course.");
     }
 };
+
+
 
 const get_value = (id) => {
     return document.getElementById(id).value;

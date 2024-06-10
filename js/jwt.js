@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:8000/'; 
+const API_URL = 'https://skillbridge-9i2p.onrender.com/'; 
 const REFRESH_TOKEN_URL = `${API_URL}/user/token/refresh/`; 
  
 async function refreshToken() { 
