@@ -18,28 +18,31 @@
         <!-- Sidebar -->
         <div class="w-64 bg-white shadow-md">
             <div class="p-6">
-                <h2 class="text-2xl font-semibold text-gray-700">Super Admin</h2>
+                <h2 class="text-2xl font-semibold text-gray-700">Dashboard</h2>
                 <nav class="mt-6" id='sidebar'>
                     <a href="index.html" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
                         <i class="fa fa-home mr-2"></i>Back to Home
                     </a>
-                    <a href="add_course.html" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                    <a href="#" id="edit_profile" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                        <i class="fa fa-edit mr-3"></i> Edit Profile
+                      </a>
+                    <a href="add_course.html" id="add_course" class="hidden flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
                         <i class="fa fa-plus mr-3"></i> Add Course
                     </a>
-                    <a href="#all-courses" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                    <a href="#all-courses" id="all_courses" class="hidden flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
                         <i class="fa fa-user-plus mr-3"></i> All Courses
                     </a>
-                    <a href="#all-users" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                    <a href="#all-users" id="all_user" class="hidden flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
                         <i class="fa fa-users mr-3"></i> All Users
                     </a>
-                    <a href="#all-reviews" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                    <a href="#all-reviews" id="all_reviews" class="hidden flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
                         <i class="fa fa-comments mr-3"></i> All Reviews
                     </a>
-                    <a href="#sold-courses" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
+                    <a href="#sold-courses" id="sold_courses" class="hidden flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
                         <i class="fa fa-shopping-cart mr-3"></i> Sold Courses
                     </a>
                     <a href="#" onclick="Logout()" id="logoutBtn" class="flex items-center py-2 text-gray-700 hover:bg-gray-200 px-4 rounded">
-                        <i class="fa fa-sign-out mr-3"></i> Logout
+                        <i class="fas fa-sign-out mr-3"></i> Logout
                     </a>                    
                 </nav>
             </div>

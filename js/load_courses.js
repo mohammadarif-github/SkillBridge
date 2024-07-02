@@ -1,10 +1,9 @@
 async function load_courses() {
   try {
     const url = "https://skillbridge-9i2p.onrender.com/main/courses";
-    const options = {
+    const response = await fetch(url, {
       method: "GET",
-    };
-    const response = await fetchWithToken(url, options);
+    });
 
     if (!response.ok) {
       throw new Error("Network response was not ok");

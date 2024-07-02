@@ -25,9 +25,14 @@ const showDetails = (data) => {
     const isAdmin = data.is_staff
   if (is_super) {
     document.getElementById("adminSection").classList.remove("hidden");
+    document.getElementById("all_user").classList.remove("hidden");
+    document.getElementById("all_reviews").classList.remove("hidden");
+    document.getElementById("all_courses").classList.remove("hidden");
+    document.getElementById("sold_courses").classList.remove("hidden");
   }
   if(isAdmin || is_super) {
     document.getElementById("staffSection").classList.remove("hidden");
+    document.getElementById("add_course").classList.remove("hidden");
   }
   document.getElementById("username").innerText = data.username;
   document.getElementById("first_name").innerText = data.first_name;
@@ -41,10 +46,9 @@ const showDetails = (data) => {
 async function load_courses() {
   try {
     const url = "https://skillbridge-9i2p.onrender.com/main/courses";
-    const options = {
+    const response = await fetch(url, {
       method: "GET",
-    };
-    const response = await fetchWithToken(url, options);
+    });
 
     if (!response.ok) {
       throw new Error("Network response was not ok");
